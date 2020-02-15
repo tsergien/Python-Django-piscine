@@ -1,0 +1,31 @@
+{% extends 'ex01/base.html' %}
+{% load static %}
+{% block title %} Ex01 : Moteur de template. {% endblock %}
+{% block style %} <link rel="stylesheet" href="{% static 'css/style2.css' %}">  {% endblock %}
+    
+{% block content %}
+
+
+<h2>block</h2> <br>
+<p>
+Defines a block that can be overridden by child templates. See Template inheritance for more information.
+</p>
+
+<h2>for</h2>
+<p>Loops over each item in an array, making the item available in a context variable. </p>
+<br>
+<p>You can loop over a list in reverse by using \[% for obj in list reversed %\].
+If you need to loop over a list of lists, you can unpack the values in each sublist into individual variables. </p>
+
+
+
+<h2>if</h2><br>
+<p>
+The if tag evaluates a variable, and if that variable is “true”
+ (i.e. exists, is not empty, and is not a false boolean value) the contents of the block are output:
+ As you can see, the if tag may take one or several elif clauses, as well as an else
+ clause that will be displayed if all previous conditions fail. These clauses are optional.
+</p>
+
+
+{% endblock %}

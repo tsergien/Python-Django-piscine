@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> My awesome form </title>
+    {% block title %}{{ title }}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+
+  <body>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

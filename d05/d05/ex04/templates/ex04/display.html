@@ -1,0 +1,35 @@
+{% extends 'ex04/base.html' %}
+{% block title %} My awesome SQL table in Postgresql {% endblock %}
+
+{% block content %}
+
+{% if is_empty  %}
+<p>No data is available</p>
+{% endif %}
+
+
+{% if not is_empty  %}
+<table>
+
+<tr>
+    <th>Episode number</th>
+    <th>Title</th>
+    <th>Producer</th>
+    <th>Director</th>
+    <th>Opening crawl</th>
+    <th>Date</th>
+ </tr>
+{% for movie in movies_list %}
+    <tr>
+        {% for field in movie %}
+            <td>
+                {{ field }}
+            </td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+
+</table>
+{% endif %}
+
+{% endblock %}

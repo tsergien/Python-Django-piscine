@@ -1,0 +1,13 @@
+{% extends 'ex02/base.html' %}
+{% load static %}
+{% block title %} Awesome form {% endblock %}
+
+{% block content %}
+<p>hey handsome</p>
+<form action="/ex02/form" method="post">
+    {% csrf_token %}
+    {{ myform }}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

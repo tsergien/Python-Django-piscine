@@ -1,0 +1,14 @@
+p {
+    color: Red;
+}
+
+table, th, td {
+    padding: 10px;
+    border: 1px solid black; 
+    border-collapse: collapse;
+}
+
+body {
+    background: rgb(216, 219, 219);
+}
+

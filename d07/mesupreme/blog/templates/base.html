@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_messages %}
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+
+  <body>
+    
+    <nav>
+      {% include 'nav.html' %}
+    </nav>
+    
+    {% block content %}
+    
+    {% endblock %}
+
+    
+  </body>
+</html>
+

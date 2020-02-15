@@ -1,0 +1,20 @@
+{% extends 'ex05/base.html' %}
+{% block title %} My awesome SQL table in Postgresql {% endblock %}
+
+{% block content %}
+
+Choose movie to delete: <br>
+{% if movies_titles %}
+<form action="/ex05/remove" method="post">
+    {% csrf_token %}
+    <select name="movie_to_delete">
+    {% for movie in movies_titles %}
+        <option value="{{ movie }}" name="movie_to_delete"> {{ movie }} </option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="Submit">
+</form>
+{% else %}
+<p>NO data available</p>
+{% endif %}
+{% endblock %}

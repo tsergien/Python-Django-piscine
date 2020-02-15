@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+{% block title %} Articles {% endblock title %}
+
+{% block content %}
+
+<table>
+
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Published</th>
+        <th>Synopsis</th>
+        <th>Content</th>
+     </tr>
+    {% for article in latest_articles %}
+        <tr>
+            {% for field in aricle %}
+                <td>
+                    {{ field }}
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    
+    </table>
+
+
+
+{% endblock %}
+
